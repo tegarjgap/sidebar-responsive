@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<!-- import file css with name style.css-->
+<link rel="stylesheet" href="style.css">
+<body>
+  <!-- this section for create button for sidebar menu-->
+    <nav class="navbar">
+          <span class="open-slide">
+              <a href="#" onclick="openSlideMenu()">
+                  <svg width="30" height="30">
+                      <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                      <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                      <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                  </svg>
+              </a>
+          </span>
+
+          <!-- create navbar menu-->
+          <ul class="navbar-nav">
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Services</a></li>
+             <li><a href="#">Contact</a></li>
+          </ul>
+    </nav>
+
+          <!--create sidebar menu-->
+          <div id="side-menu" class="side-nav">
+              <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Contact</a>
+          </div>
+
+          <!-- create text for title -->
+          <div id="main">
+              <h1>Responsive Side Menu</h1>
+          </div>
+
+          <!--create function for click sidebar menu in javascript-->
+          <script type="text/javascript">
+              function openSlideMenu(){
+                  document.getElementById('side-menu').style.width='250px';
+                  document.getElementById('main').style.marginLeft='250px';
+              }
+              function closeSideMenu(){
+                  document.getElementById('side-menu').style.width='0';
+                  document.getElementById('main').style.marginLeft='0';
+              }
+          </script>
+
+</body>
+</html>
